@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+  background: url(../images/pattern-bg.png) no-repeat;
+  background-size: 100vw 35vh;
+}
+
+body {
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
