@@ -163,7 +163,7 @@ function completeOrRemoveTask(e){
             e.target.parentElement.parentElement.style.opacity = '0';
         },100);
         setTimeout(()=>{
-            if(!e.target.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.checked){
+            if(!e.target.parentElement.parentElement.firstElementChild.checked){
                 tasks--;
             }
             document.querySelector('.items-left').innerText = tasks; 
