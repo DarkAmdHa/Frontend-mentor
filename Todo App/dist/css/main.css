@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+  background: url(../images/bg-desktop-light.jpg) no-repeat, #e4e5f1;
+  background-size: 100vw;
+  height: 100vh;
+  color: #484b6a;
+  transition: 0.5s ease;
+  overflow-x: hidden; }
+
+ul {
+  list-style: none; }
+
+main {
+  display: flex;
+  max-width: 572px;
+  width: 90vw;
+  flex-direction: column;
+  margin: auto;
+  height: 100%; }
+
+.to-do-app {
+  margin-top: 6rem; }
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem; }
+  .title h1 {
+    color: #fafafa;
+    text-transform: uppercase;
+    letter-spacing: 1rem; }
+
+.task-container {
+  background: #fafafa;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  transition: 1s ease; }
+  .task-container.dark {
+    background: #393a4c; }
+  .task-container .add-task {
+    border: none;
+    width: 100%;
+    height: 2rem;
+    font-size: 1.1rem;
+    outline: none;
+    margin-left: 2.5rem;
+    font-family: "Josefin Sans";
+    color: #484b6a;
+    background: #fafafa;
+    transition: 1s ease; }
+    .task-container .add-task.dark {
+      background: #393a4c;
+      color: #cacde8; }
+  .task-container input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 1.5rem;
+    width: 1.5rem;
+    z-index: 2; }
+    .task-container input[type="checkbox"]:checked ~ .checkmark {
+      background: url(../images/icon-check.svg) no-repeat center center, linear-gradient(135deg, #57ddff, #c058f3);
+      border: none; }
+    .task-container input[type="checkbox"]:hover ~ .border {
+      opacity: 1; }
+    .task-container input[type="checkbox"]:checked:hover ~ .border {
+      opacity: 0; }
+  .task-container .checkmark {
+    position: absolute;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transition: border-color 1s ease, background 1s ease; }
+    .task-container .checkmark:hover {
+      cursor: pointer; }
+    .task-container .checkmark.dark {
+      border-color: rgba(255, 255, 255, 0.2);
+      background: #393a4c; }
+
+.border {
+  background: linear-gradient(135deg, #57ddff, #c058f3);
+  position: absolute;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  left: 15px;
+  opacity: 0;
+  transition: 0.5s ease; }
+
+.to-dos {
+  max-width: 572px;
+  width: 90vw;
+  background: #fff;
+  border-radius: 4px;
+  min-height: 10rem;
+  position: relative;
+  transition: 1s ease; }
+  .to-dos.dark {
+    background: #393a4c; }
+  .to-dos > ul {
+    min-height: 10rem; }
+    .to-dos > ul li {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+      .to-dos > ul li:last-child {
+        border: none; }
+      .to-dos > ul li .task-container {
+        padding: 1.75rem 1rem;
+        margin-bottom: 0;
+        transform: translateX(-800px);
+        opacity: 0;
+        transition: all 1s ease; }
+        .to-dos > ul li .task-container.dark {
+          background: #393a4c; }
+        .to-dos > ul li .task-container a {
+          margin-left: auto;
+          text-decoration: none;
+          opacity: 0;
+          pointer-events: none; }
+        .to-dos > ul li .task-container:hover {
+          cursor: pointer; }
+          .to-dos > ul li .task-container:hover > a {
+            opacity: 1;
+            pointer-events: visible; }
+        .to-dos > ul li .task-container p {
+          margin-left: 2.5rem; }
+  .to-dos .items-action {
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+    color: #9394a5; }
+    .to-dos .items-action a {
+      text-decoration: none;
+      transition: color 1s ease;
+      color: #9394a5; }
+      .to-dos .items-action a.selected {
+        color: #3a7bfd; }
+      .to-dos .items-action a:hover {
+        color: #484b6a; }
+      .to-dos .items-action a.dark:hover {
+        color: #e4e5f1; }
+    .to-dos .items-action ul {
+      display: flex; }
+      .to-dos .items-action ul li {
+        font-weight: 800;
+        padding: 0 0.5rem; }
+
+.empty {
+  text-align: center;
+  margin-top: 2rem;
+  position: absolute;
+  width: 100%;
+  transition: 1s ease; }
+
+@media (max-width: 800px) {
+  body {
+    background-size: auto; } }
+
+@media (max-width: 500px) {
+  body {
+    background: url("../images/bg-mobile-light.jpg") no-repeat;
+    background-size: 100vw; } }

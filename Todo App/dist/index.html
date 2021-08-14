@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Todo app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+
+<body class='dark'>
+
+  <main>
+    <div class="to-do-app">
+      <div class="title">
+        <h1>Todo</h1>
+        <div class=night>
+          <a href="#" class='night-mode'><img src="images/icon-moon.svg" alt="Night Mode"></a>
+        </div>
+        <div class="day" style='display: none;'>
+          <a href="#" class='day-mode'><img src="images/icon-sun.svg" alt="Day Mode"></a>
+        </div>
+      </div>    
+      <div class="task-container">
+        <input type="checkbox" class='task-select selectall'>
+   
+          <span class='checkmark'></span>
+          <div class="border"></div>
+        <input type="text" class='add-task' placeholder='Create a new todo...'>
+      </div>
+      <div class="to-dos">
+        <ul>  
+            <div class="empty">
+              <h2>Wow, no tasks!</h2>
+              <p>Add one by entering it above and pressing Enter.
+              </p>
+            </div>   
+        </ul>
+        <div class="items-action">
+          <div>
+            <p><span class="items-left"></span> items left</p>
+          </div>
+          <div class="items-state">
+            <ul>
+              <li><a href="#" class='selected all'>All</a></li>
+              <li><a href="#"  class='active'>Active</a></li>
+              <li><a href="#" class='completed'>Completed</a></li>
+            </ul>
+          </div>
+          <div>
+            <p><a href="#" class='clear'>Clear Completed</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </main>
+
+  <script src='js/app.js'></script>
+</body>
+</html>
