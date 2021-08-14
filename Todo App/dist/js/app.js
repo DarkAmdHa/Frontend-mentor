@@ -171,7 +171,6 @@ function completeOrRemoveTask(e){
             removeTaskFromLS(e.target.parentElement.previousElementSibling);
 
             e.target.parentElement.parentElement.parentElement.remove();
-            console.log(tasks);
             if(tasks === 0){
             document.querySelector('.empty').style.opacity = '1';
             }
