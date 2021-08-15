@@ -54,6 +54,8 @@ function turnOnNightMode(){
     setTimeout(()=>{
         document.querySelector('body').style.background = 'url(./images/bg-desktop-dark.jpg) no-repeat, hsl(235, 21%, 11%)';
         document.querySelector('body').style.color = 'hsl(234, 39%, 85%)';
+        document.querySelector('body').style.backgroundSize = '100vw';
+
     },100);
     
     //Dark color for containers
@@ -74,7 +76,8 @@ function turnOnDayMode(){
 
     setTimeout(()=>{
         document.querySelector('body').style.background = 'url(./images/bg-desktop-light.jpg) no-repeat, hsl(236, 33%, 92%)';
-    document.querySelector('body').style.color = 'hsl(235, 19%, 35%)';
+        document.querySelector('body').style.color = 'hsl(235, 19%, 35%)';
+        document.querySelector('body').style.backgroundSize = '100vw';
     },100);
 
     document.querySelectorAll('.task-container').forEach(task =>{task.classList.toggle('dark');});
