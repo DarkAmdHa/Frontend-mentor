@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+  background: url("../images/bg-pattern-desktop.svg") no-repeat,
+    linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  background-size: 70vw 125vh;
+  height: 100vh;
+}
+
+img {
+  width: 100%;
+}

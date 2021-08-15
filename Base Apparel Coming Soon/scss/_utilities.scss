@@ -1,0 +1,50 @@
+.uppercase {
+  text-transform: uppercase;
+}
+
+.py {
+  &-1 {
+    padding: 1rem 0;
+  }
+  &-2 {
+    padding: 2rem 0;
+  }
+  &-3 {
+    padding: 3rem 0;
+  }
+  &-4 {
+    padding: 4rem 0;
+  }
+}
+
+.alert {
+  padding-left: 34px;
+  padding-top: 1rem;
+  color: hsl(0, 93%, 68%);
+  opacity: 0;
+  font-size: 0.8rem;
+  animation: jiggle 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+@keyframes jiggle {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+.congrats {
+  padding-left: 34px;
+  padding-top: 1rem;
+  color: green;
+  opacity: 0;
+  font-size: 0.8rem;
+  transition: all 0.5s ease;
+}

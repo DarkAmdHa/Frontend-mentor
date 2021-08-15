@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+  background: url("../images/bg-pattern-desktop.svg") no-repeat, linear-gradient(135deg, white, #fff5f5);
+  background-size: 70vw 125vh;
+  height: 100vh; }
+
+img {
+  width: 100%; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.py-1 {
+  padding: 1rem 0; }
+
+.py-2 {
+  padding: 2rem 0; }
+
+.py-3 {
+  padding: 3rem 0; }
+
+.py-4 {
+  padding: 4rem 0; }
+
+.alert {
+  padding-left: 34px;
+  padding-top: 1rem;
+  color: #f96262;
+  opacity: 0;
+  font-size: 0.8rem;
+  animation: jiggle 0.5s ease;
+  transition: all 0.5s ease; }
+
+@keyframes jiggle {
+  0% {
+    transform: translateX(0); }
+  25% {
+    transform: translateX(-5px); }
+  75% {
+    transform: translateX(5px); } }
+
+.congrats {
+  padding-left: 34px;
+  padding-top: 1rem;
+  color: green;
+  opacity: 0;
+  font-size: 0.8rem;
+  transition: all 0.5s ease; }
+
+main {
+  display: grid;
+  grid-template-columns: 5.77fr 4.25fr;
+  width: 100%;
+  max-height: 750px;
+  max-width: 1520px;
+  height: 100vh;
+  margin: auto; }
+  main .content {
+    padding: 63px 166px; }
+    main .content .logo {
+      width: 10rem;
+      margin-bottom: 8rem; }
+    main .content h1 {
+      color: #413a3a;
+      font-size: 4rem;
+      font-weight: 600;
+      letter-spacing: 1rem;
+      line-height: 4.5rem;
+      margin-bottom: 17px; }
+      main .content h1 .primary {
+        color: #ce9797;
+        font-weight: 300; }
+    main .content .message {
+      width: 430px;
+      color: #ce9797;
+      font-size: 1rem;
+      line-height: 1.8rem;
+      margin-bottom: 40px; }
+    main .content form {
+      position: relative;
+      width: 420px; }
+      main .content form .email {
+        height: 53px;
+        width: 400px;
+        border-radius: 150px;
+        border: 1px solid #ce9797;
+        padding: 0 34px;
+        outline: none;
+        background: transparent;
+        transition: border-color 0.5s ease; }
+      main .content form .submit-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #fff9f9;
+        border-radius: 150px;
+        width: 100px;
+        height: 53px; }
+      main .content form .exclamation {
+        position: absolute;
+        top: 30%;
+        left: -30%;
+        width: 1.5rem;
+        opacity: 0;
+        transition: opacity 0.5s ease; }
+      main .content form .submit {
+        width: 100px;
+        height: 53px;
+        border-radius: 150px;
+        border: none;
+        background: url(../images/icon-arrow.svg) no-repeat center center, linear-gradient(135deg, #f8bfbf, #ee8c8c);
+        box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.2);
+        transition: all 0.55s ease; }
+        main .content form .submit:hover {
+          cursor: pointer;
+          opacity: 0.8;
+          box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.4); }
+  main .image {
+    align-self: center; }
+
+.mobile {
+  display: none; }
+
+@media (max-width: 1144px) {
+  main .content {
+    padding: 1rem; } }
+
+@media (max-width: 816px) {
+  main .content {
+    padding: 1rem; }
+    main .content h1 {
+      font-size: 3rem; }
+    main .content .message {
+      width: 80%; }
+    main .content form {
+      width: 80%; }
+      main .content form .email {
+        height: 53px;
+        width: 80%; } }
+
+@media (max-width: 600px) {
+  body {
+    background: #fff5f5; }
+  main {
+    grid-template-columns: 1fr;
+    grid-template-areas: "image" "content"; }
+    main .content {
+      text-align: center;
+      padding: 5rem 1rem;
+      grid-area: content; }
+      main .content .logo {
+        display: none; }
+      main .content h1 {
+        font-size: 3rem;
+        line-height: 3rem; }
+      main .content .message {
+        width: 100%;
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+        padding: 0 1rem; }
+      main .content form {
+        width: 100%; }
+        main .content form .email {
+          height: 53px;
+          width: 100%; }
+    main .image {
+      grid-area: image; }
+  .mobile {
+    display: block;
+    width: 100px;
+    margin: 0.5rem 0 1rem 2rem; } }

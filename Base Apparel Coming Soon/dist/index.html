@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <img class='logo mobile' src="images/logo.svg" alt="Base Apparel Logo">
+
+  <main>
+    <div class="content">
+      <img class='logo' src="images/logo.svg" alt="Base Apparel Logo">
+
+      <h1 class='uppercase'><span class="primary">We're</span> coming soon</h1>
+      <p class="message">Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.</p>
+
+      <form class='form'>
+        <input type="text" name='email' placeholder ='Email Address' class='email'>
+        <div class='submit-container'>
+          <img src="images/icon-error.svg" alt="Error" class='exclamation'>
+          <input type="submit" class='submit' value=''>
+        </div>
+      </form>
+    </div>
+    <div class="image">
+      <picture>
+        <source media="(max-width:600px)" srcset="images/hero-mobile.jpg">
+        <img src="images/hero-desktop.jpg" alt="Fashion">
+      </picture>
+    </div>
+  </main>
+  <script src="js/app.js"></script>
+</body>
+</html>
