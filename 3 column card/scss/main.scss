@@ -1,0 +1,78 @@
+@import "config";
+
+main {
+  padding-top: 170px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 920px;
+  height: 500px;
+  border-radius: 250px;
+  margin: auto;
+
+  color: white;
+  .car {
+    padding: 45px 46px;
+    & > div {
+      width: 60px;
+      margin-bottom: 31px;
+      margin-top: 3px;
+    }
+    h1 {
+      margin-bottom: 27px;
+      text-transform: uppercase;
+      font-size: 2.35rem;
+    }
+    p {
+      margin-bottom: 96px;
+      line-height: 1.6rem;
+      width: 94%;
+      color: hsla(0, 0%, 100%, 0.75);
+      font-size: 0.9rem;
+    }
+  }
+  .sedans {
+    background: hsl(31, 77%, 52%);
+    border-radius: 10px 0 0 10px;
+  }
+  .suv {
+    background: hsl(184, 100%, 22%);
+  }
+  .luxury {
+    background: hsl(179, 100%, 13%);
+    border-radius: 0 10px 10px 0;
+  }
+}
+
+@media (max-width: 948px) {
+  main {
+    padding-top: 6rem;
+  }
+  .grid-container {
+    width: 768px;
+    margin: 0 2rem 6rem 2rem;
+    height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    width: auto;
+    .car {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .sedans {
+      border-radius: 10px 10px 0 0;
+    }
+    .luxury {
+      border-radius: 0 0 10px 10px;
+    }
+  }
+}

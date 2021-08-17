@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  background: hsl(0, 0%, 95%);
+}
+
+%btn-shared {
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  transition: all 0.5s ease;
+}
+
+.btn {
+  @extend %btn-shared;
+  text-decoration: none;
+  color: #333;
+  background: hsl(0, 0%, 95%);
+  &:hover {
+    background: transparent;
+    border-color: hsl(0, 0%, 95%);
+    color: hsl(0, 0%, 95%);
+  }
+}
+
+img {
+  width: 100%;
+}
+
+h {
+  &1 {
+    font-family: "Big Shoulders Display", cursive;
+    color: hsl(0, 0%, 95%);
+  }
+  &2 {
+    font-family: "Big Shoulders Display", cursive;
+    color: hsl(0, 0%, 95%);
+  }
+  &3 {
+    font-family: "Big Shoulders Display", cursive;
+    color: hsl(0, 0%, 95%);
+  }
+  &4 {
+    font-family: "Big Shoulders Display", cursive;
+    color: hsl(0, 0%, 95%);
+  }
+  &5 {
+    font-family: "Big Shoulders Display", cursive;
+    color: hsl(0, 0%, 95%);
+  }
+  &6 {
+    font-family: "Big Shoulders Display", cursive;
+    color: hsl(0, 0%, 95%);
+  }
+}
