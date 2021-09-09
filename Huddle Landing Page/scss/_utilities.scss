@@ -1,0 +1,39 @@
+$pink: hsl(322, 100%, 66%);
+$light-pink: hsl(321, 100%, 78%);
+$light-red: hsl(0, 100%, 63%);
+$pale-blue: hsl(207, 100%, 98%);
+
+.container {
+  max-width: 1240px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+%btn-shared {
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.btn {
+  @extend %btn-shared;
+  background-color: $pink;
+  border-radius: 8px;
+  color: $pale-blue;
+  padding: 0.5rem 1rem;
+  &-filled {
+    background-color: $pink;
+    color: #fff;
+    @extend %btn-shared;
+    border-radius: 54px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 27px 100px;
+  }
+  &-empty {
+    @extend %btn-shared;
+    border: 2px solid $pink;
+    background: #fff;
+    color: $pink;
+    padding: 9px 30px;
+  }
+}
