@@ -6,12 +6,13 @@ $pale-blue: hsl(207, 100%, 98%);
 .container {
   max-width: 1240px;
   margin: auto;
-  padding: 0 1rem;
+  padding: 0 3rem;
 }
 
 %btn-shared {
   text-decoration: none;
   border-radius: 20px;
+  outline: none;
 }
 
 .btn {
@@ -20,6 +21,10 @@ $pale-blue: hsl(207, 100%, 98%);
   border-radius: 8px;
   color: $pale-blue;
   padding: 0.5rem 1rem;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    background-color: $light-pink;
+  }
   &-filled {
     background-color: $pink;
     color: #fff;
@@ -28,6 +33,12 @@ $pale-blue: hsl(207, 100%, 98%);
     font-size: 1.25rem;
     font-weight: bold;
     padding: 27px 100px;
+    box-shadow: 0px 10px 20px 0 rgba(78, 57, 57, 0.22);
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      background-color: $light-pink;
+      box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.2);
+    }
   }
   &-empty {
     @extend %btn-shared;
@@ -35,5 +46,40 @@ $pale-blue: hsl(207, 100%, 98%);
     background: #fff;
     color: $pink;
     padding: 9px 30px;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      color: $light-pink;
+      border-color: $light-pink;
+      box-shadow: none;
+    }
   }
+}
+
+.alert {
+  color: #f96262;
+  opacity: 0;
+  font-size: 0.8rem;
+  animation: jiggle 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+@keyframes jiggle {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+.congrats {
+  padding-left: 34px;
+  padding-top: 1rem;
+  color: green;
+  opacity: 0;
+  font-size: 0.8rem;
+  transition: all 0.5s ease;
 }
