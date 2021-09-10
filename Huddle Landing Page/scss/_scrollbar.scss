@@ -1,0 +1,18 @@
+@mixin scrollbars($size, $foreground-color, $background-color) {
+  &::-webkit-scrollbar {
+    width: $size;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $foreground-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  & {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
