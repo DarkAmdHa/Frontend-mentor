@@ -1318,3 +1318,20 @@ color:var(--secColor);
 .search-filters label {
   color: #fff;
 }
+
+.interstitial-logos-container .interstitial-logo_left {
+    display: none !important;!i;!;
+}
+
+.interstitial-logos-container .interstitial-logo_center {
+    display: none !important;!i;!;
+}
+
+.interstitial-container{
+    background: #1e0726;
+}
+
+.interstitial-container a {
+  color: #fff !important; 
+}
+
