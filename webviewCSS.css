@@ -1335,7 +1335,9 @@ color:var(--secColor);
   color: #fff !important; 
 }
 
-.interstitial-container .interstitial-lower {
+@media (max-width:768px){
+  .interstitial-container .interstitial-lower {
     background: #2d1435;
     box-shadow: 1px -9px 20px rgb(0 0 0 / 11%);
+}
 }
