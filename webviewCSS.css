@@ -7,7 +7,7 @@ html {
 }
 body{
     height: 100vh;
-    overflow-y: scroll !important;!i;!;
+    overflow-y: scroll !important;
 }
 
 .dismissable.private-settings-dissmissable {
@@ -1298,6 +1298,7 @@ h3.placements-leaderboard-title {
 
 .search-results-page .search-results-tab-button.search-results-tab-active {
   background: var(--primaryColor);
+  color: #fff;
 }
 
 .search-results-page .search-results-tab-button{
@@ -1320,11 +1321,11 @@ color:var(--secColor);
 }
 
 .interstitial-logos-container .interstitial-logo_left {
-    display: none !important;!i;!;
+    display: none !important;
 }
 
 .interstitial-logos-container .interstitial-logo_center {
-    display: none !important;!i;!;
+    display: none !important;
 }
 
 .interstitial-container{
@@ -1339,9 +1340,48 @@ color:var(--secColor);
   .interstitial-container .interstitial-lower {
     background: #2d1435;
     box-shadow: 1px -9px 20px rgb(0 0 0 / 11%);
-    position: static;
-    margin-top: 25px;
 }
 }
 
 
+
+
+.mobile-search-filters-modal .mobile-search-filters-header p {
+    color: #fff !important;!i;!;
+}
+
+
+
+
+
+.mobile-search-filters-modal .mobile-search-filters-header {
+    background: #333;
+    margin: 0;
+    box-shadow: 0px 10px 14px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-search-filters-modal .mobile-search-filters_wrap {
+    background: #333;
+}
+
+.search-filters .search-filters-content {
+    margin-top: 20px;
+}
+
+.search-results-page .search-results-filters button {
+    background: var(--primaryColor)
+}
+
+.search-results-page .search-results-filters button.dropdown-item {
+  color:#fff;
+}
+
+.search-list-offer {
+    background: #2b1447;
+    box-shadow: 3px 9px 20px rgba(0, 0, 0, 0.2);
+}
+
+.search-list-offer_pill {
+    color: var(--secColor);
+    border-color: var(--secColor);
+}
